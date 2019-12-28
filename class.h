@@ -13,7 +13,9 @@ struct Dis {
 	string path;
 	int value;
 	bool visit;
+	bool exist;//此路由器是否存在
 	Dis() {
+		exist = false;
 		visit = false;
 		value = 0;
 		path = "";
@@ -42,7 +44,7 @@ public:
 	void Dijkstra();
 	//打印最短路径
 	void print_path(int begin);
-	void out_excel();//输出路由表
+	void out_excel(int numb);//输出路由表
 	void addnode();//增加路由器
 	void addline();//增加路线
 	void delline();//删除某条路线

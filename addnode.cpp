@@ -1,6 +1,7 @@
 #include"class.h"
 void Graph_DG::addnode() {
 	vexnum++;
+	dis[vexnum-1].exist = true;
 	cout << "输入新增的路径数目:";
 	int numb;
 	cin >> numb;

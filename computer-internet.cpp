@@ -1,15 +1,19 @@
 ﻿#include"class.h"
 
 int main() {
+	ifstream fin("2.txt");
 	int vexnum; int edge;
 	cout << "输入局域网图的路由器个数和路径的条数：" << endl;
-	cin >> vexnum >> edge;
+	fin >> vexnum >> edge;
 	while (!check(vexnum, edge)) {
 		cout << "输入的数值不合法，请重新输入" << endl;
-		cin >> vexnum >> edge;
+		fin >> vexnum >> edge;
 	}
 	Graph_DG graph(vexnum, edge);
 	graph.createGraph();
+	for (int i = 0; i < vexnum; i++) {
+		graph.dis[i].exist = true;
+	}
 	while (1) {
 		cout << "实现功能如下：" << endl;
 		cout << "1.打印邻接矩阵" << endl;
@@ -26,7 +30,7 @@ int main() {
 			cin >> begin;
 			graph.work_begin(begin);
 			graph.Dijkstra();
-			graph.out_excel();
+			graph.out_excel(begin);
 			graph.print_path(begin);
 		}
 		else if (m == 3)
@@ -36,7 +40,7 @@ int main() {
 			cin >> begin;
 			graph.work_begin(begin);
 			graph.Dijkstra();
-			graph.out_excel();
+			graph.out_excel(begin);
 			graph.print_path(begin);
 		}
 		else if (m == 4)
@@ -46,7 +50,11 @@ int main() {
 			cin >> begin;
 			graph.work_begin(begin);
 			graph.Dijkstra();
-			graph.out_excel();
+			cout << "输出确认删除的路由器序号：";
+			int data;
+			cin >> data;
+			graph.dis[data - 1].exist = false;
+			graph.out_excel(begin);
 			graph.print_path(begin);
 		}
 		else if (m == 5) {
@@ -55,7 +63,7 @@ int main() {
 			cin >> begin;
 			graph.work_begin(begin);
 			graph.Dijkstra();
-			graph.out_excel();
+			graph.out_excel(begin);
 			graph.print_path(begin);
 		}
 		else if (m == 6) {
@@ -64,7 +72,7 @@ int main() {
 			cin >> begin;
 			graph.work_begin(begin);
 			graph.Dijkstra();
-			graph.out_excel();
+			graph.out_excel(begin);
 			graph.print_path(begin);
 		}
 		else break;
