@@ -1,9 +1,10 @@
 #include"class.h"
 void Graph_DG::addline() //增加某条路线
 {
+	//aaa
 	cout << "邓行" << endl;
 	cout << "邓行" << endl;
-	cout << "输入需要增加路线两端的路由器序号及权重：";
+	cout << "输入需要增加路线两端的路由器序号及权重："<<endl;
 	int m1, n1, q;
 	cin >> m1 >> n1 >> q;
 	for (int i = 0; i < vexnum; i++) {
