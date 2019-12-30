@@ -2,6 +2,7 @@
 void Graph_DG::addline() //增加某条路线
 {
 	cout << "邓行" << endl;
+	cout << "邓行" << endl;
 	cout << "输入需要增加路线两端的路由器序号及权重：";
 	int m1, n1, q;
 	cin >> m1 >> n1 >> q;
