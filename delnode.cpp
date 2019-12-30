@@ -2,7 +2,7 @@
 void Graph_DG::delnode(int numb) {
 	if (dis[numb - 1].exist == false)
 	{
-		cout << "此路由器不存在";
+		cout << "此路由器不存在"<<endl;
 		return;
 	}
 
