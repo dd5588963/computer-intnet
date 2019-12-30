@@ -45,15 +45,18 @@ int main() {
 		}
 		else if (m == 4)
 		{
-			graph.delnode();
+			cout << "需要删除路由器的序号为：";
+			int data;
+			cin >> data;
+			graph.delnode(data);
 			int begin;
 			cin >> begin;
 			graph.work_begin(begin);
 			graph.Dijkstra();
 			cout << "输出确认删除的路由器序号：";
-			int data;
-			cin >> data;
-			graph.dis[data - 1].exist = false;
+			int da;
+			cin >> da;
+			graph.dis[da - 1].exist = false;
 			graph.out_excel(begin);
 			graph.print_path(begin);
 		}

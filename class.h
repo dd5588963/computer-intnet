@@ -47,6 +47,6 @@ public:
 	void addnode(int numb);//增加路由器
 	void addline();//增加路线
 	void delline();//删除某条路线
-	void delnode();//删除某个路由器
+	void delnode(int numb);//删除某个路由器
 };
 #endif
