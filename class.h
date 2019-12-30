@@ -45,7 +45,7 @@ public:
 	//打印最短路径
 	void print_path(int begin);
 	void out_excel(int numb);//输出路由表
-	void addnode();//增加路由器
+	void addnode(int numb);//增加路由器
 	void addline();//增加路线
 	void delline();//删除某条路线
 	void delnode();//删除某个路由器

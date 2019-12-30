@@ -67,7 +67,10 @@ int main() {
 			graph.print_path(begin);
 		}
 		else if (m == 6) {
-			graph.addnode();
+			cout << "输入新增路由器序号：";
+			int numb;
+			cin >> numb;
+			graph.addnode(numb);
 			int begin;
 			cin >> begin;
 			graph.work_begin(begin);
