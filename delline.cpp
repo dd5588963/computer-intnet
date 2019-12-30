@@ -1,6 +1,5 @@
 #include"class.h"
 void Graph_DG::delline() {
-	cout << "asd" << endl;
 	cout << "输出删除路径两端的路由器序号";
 	int m, n;
 	cin >> m >> n;
