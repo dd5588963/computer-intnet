@@ -1,6 +1,5 @@
 #include"class.h"
 void Graph_DG::addnode(int num) {
-	cout << "aasdsd";
 	if (num > vexnum) {
 		vexnum++;
 		dis[vexnum - 1].exist = true;
