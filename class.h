@@ -7,6 +7,7 @@
 using namespace std;
 //aaaaa111111
 //唉唉唉嗄44aaaaa
+//aaaaaa
 bool check(int Vexnum, int edge);
 
 //记录源路由器到每个路由器的最短路径的信息
